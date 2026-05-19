@@ -3,7 +3,7 @@ import SectionContainer from "@/components/ui/SectionContainer";
 
 const WhyChooseUsSection = () => {
   return (
-    <SectionContainer className="py-16">
+    <SectionContainer className="pt-8 pb-16">
       <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
         <h2 className="text-2xl md:text-3xl font-semibold">Miért minket?</h2>
         <p className="mt-2 text-sm text-neutral-400 max-w-2xl">

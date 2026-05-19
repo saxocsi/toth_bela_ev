@@ -8,6 +8,11 @@ html {
 
 body {
   @apply bg-neutral-950 text-neutral-100 antialiased;
+  background-image: url("/images/workflow/0.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 ::selection {

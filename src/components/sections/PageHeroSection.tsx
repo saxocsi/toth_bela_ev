@@ -13,7 +13,7 @@ const PageHeroSection = ({
   badges = [],
 }: PageHeroSectionProps) => {
   return (
-    <SectionContainer className="py-14 md:py-18">
+    <SectionContainer className="pt-28 pb-14 md:pt-32 md:pb-18">
       <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
         {badges.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-5">

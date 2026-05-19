@@ -4,7 +4,7 @@ import PrimaryButton from "@/components/ui/PrimaryButton";
 
 const SiteHeader = () => {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
+    <header className="fixed top-0 left-0 w-full z-40 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
       <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
         <div className="min-w-0">
           <div className="text-base font-semibold tracking-tight">
