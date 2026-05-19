@@ -9,14 +9,16 @@ const MobileStickyCtaBar = () => {
         <a
           href={`tel:${siteConfig.company.phone}`}
           className="rounded-xl bg-white text-black py-3 text-center font-semibold"
+          aria-label="Hívás most"
         >
-          📞 Hívás
+          <span aria-hidden="true">📞 </span>Hívás
         </a>
         <a
           href="/contact"
           className="rounded-xl border border-white/30 text-white py-3 text-center font-semibold hover:bg-white hover:text-black transition"
+          aria-label="Árajánlat kérése"
         >
-          ✉️ Ajánlat
+          <span aria-hidden="true">✉️ </span>Ajánlat
         </a>
       </div>
     </div>

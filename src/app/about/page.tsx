@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { buildPageSeo } from "@/config/seo";
 import { siteConfig } from "@/config/siteConfig";
 import { buildLocalBusinessJsonLd } from "@/lib/sonLd";
-import PageHeroSection from "@/src/components/sections/PageHeroSection";
-import CallToActionSection from "@/src/components/sections/CallToActionSection";
-import AboutSection from "@/src/components/sections/AboutSection";
+import PageHeroSection from "@/components/sections/PageHeroSection";
+import CallToActionSection from "@/components/sections/CallToActionSection";
+import AboutSection from "@/components/sections/AboutSection";
 
 export const metadata: Metadata = buildPageSeo({
   title: "Rólunk – Tóth Bela EV (30+ év tapasztalat) Budapest és környéke",

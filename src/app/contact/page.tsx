@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/config/siteConfig";
 import { buildPageSeo } from "@/config/seo";
 import { buildLocalBusinessJsonLd } from "@/lib/sonLd";
-import PageHeroSection from "@/src/components/sections/PageHeroSection";
-import ContactSection from "@/src/components/sections/ContactSection";
+import PageHeroSection from "@/components/sections/PageHeroSection";
+import ContactSection from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = buildPageSeo({
   title: "Kapcsolat – Hívás / Email 1 kattintással (Budapest és környéke)",
@@ -24,7 +24,7 @@ export default function ContactPage() {
       <PageHeroSection
         title="Kapcsolat"
         subtitle="Kattints és hívj, vagy küldj előre kitöltött emailt ajánlatkéréshez."
-        badges={[siteConfig.company.area, "tel:", "mailto:"]}
+        badges={[siteConfig.company.area, "telefon", "email"]}
       />
       <ContactSection />
     </>

@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/siteConfig";
 import NavLink from "./NavLink";
-import PrimaryButton from "../ui/PrimaryButton";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 
 const SiteHeader = () => {
   return (
@@ -15,7 +15,7 @@ const SiteHeader = () => {
           </div>
         </div>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-6" aria-label="Főnavigáció">
           <NavLink href="/" label="Főoldal" />
           <NavLink href="/services" label="Szolgáltatások" />
           <NavLink href="/references" label="Referenciák" />

@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/siteConfig";
-import PageHeroSection from "@/src/components/sections/PageHeroSection";
-import { buildLocalBusinessJsonLd } from "@/lib/sonLd";
 import { buildPageSeo } from "@/config/seo";
-import ServiceDetailsSection from "@/src/components/sections/ServiceDetailsSection";
-import CallToActionSection from "@/src/components/sections/CallToActionSection";
-import SectionContainer from "@/src/components/ui/SectionContainer";
-import ReferenceGallery from "@/src/components/ui/ReferenceGallery";
+import { buildLocalBusinessJsonLd } from "@/lib/sonLd";
+import PageHeroSection from "@/components/sections/PageHeroSection";
+import CallToActionSection from "@/components/sections/CallToActionSection";
+import SectionContainer from "@/components/ui/SectionContainer";
+import ReferenceGallery from "@/components/ui/ReferenceGallery";
 
 export const metadata: Metadata = buildPageSeo({
   title: "Referenciák – Burkolás és kőműves munkák Budapest környékén",
@@ -32,7 +31,7 @@ export default function ReferencesPage() {
 
       <SectionContainer className="pb-16">
         <ReferenceGallery
-          categories={siteConfig.references.categories as any}
+          categories={siteConfig.references.categories}
           items={siteConfig.references.items}
           enableCategoryFilter
         />

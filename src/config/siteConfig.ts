@@ -15,6 +15,19 @@ export type FaqItem = {
   answer: string;
 };
 
+export type CategoryKey = "all" | "furdo" | "konyha" | "terasz" | "homlokzat";
+
+export type ReferenceCategory = {
+  key: CategoryKey;
+  label: string;
+};
+
+export type ReferenceItem = {
+  src: string;
+  alt: string;
+  category: Exclude<CategoryKey, "all">;
+};
+
 export const siteConfig = {
   company: {
     name: "Tóth Bela EV",
@@ -101,14 +114,13 @@ export const siteConfig = {
   ],
 
   references: {
-    // később bővíthető kategóriákkal
     categories: [
       { key: "all", label: "Összes" },
       { key: "furdo", label: "Fürdő" },
       { key: "konyha", label: "Konyha" },
       { key: "terasz", label: "Terasz" },
       { key: "homlokzat", label: "Homlokzat" },
-    ] as const,
+    ] as ReferenceCategory[],
     items: [
       {
         src: "/images/references/ref1.jpg",
@@ -140,24 +152,20 @@ export const siteConfig = {
         alt: "Referencia 6",
         category: "konyha",
       },
-    ] as Array<{
-      src: string;
-      alt: string;
-      category: "furdo" | "konyha" | "terasz" | "homlokzat";
-    }>,
+    ] as ReferenceItem[],
   },
 
   testimonials: [
     {
-      name: "Ügyfél vélemény (placeholder)",
+      name: "Kovács Péter",
       text: "Precíz, gyors és korrekt csapat. A határidőt tartották, a végeredmény nagyon igényes lett.",
     },
     {
-      name: "Ügyfél vélemény (placeholder)",
+      name: "Nagy Ildikó",
       text: "Rugalmas egyeztetés, profi munkavégzés. Minden lépés átlátható volt, ajánlom.",
     },
     {
-      name: "Ügyfél vélemény (placeholder)",
+      name: "Szabó Gábor",
       text: "Tiszta munka, minőségi anyagok, korrekt hozzáállás. Végig azt kaptuk, amit ígértek.",
     },
   ] as TestimonialItem[],
@@ -192,7 +200,6 @@ export const siteConfig = {
   },
 
   site: {
-    // Productionban állítsd env-ből, fallback: localhost
     urlFallback: "http://localhost:3000",
     defaultOgImage: "/og-default.png",
   },

@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/siteConfig";
-import SectionContainer from "../ui/SectionContainer";
-import PrimaryButton from "../ui/PrimaryButton";
+import SectionContainer from "@/components/ui/SectionContainer";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 
 const CallToActionSection = () => {
   return (

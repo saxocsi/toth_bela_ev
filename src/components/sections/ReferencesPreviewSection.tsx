@@ -1,7 +1,7 @@
 import { siteConfig } from "@/config/siteConfig";
-import PrimaryButton from "../ui/PrimaryButton";
-import ReferenceGallery from "../ui/ReferenceGallery";
-import SectionContainer from "../ui/SectionContainer";
+import PrimaryButton from "@/components/ui/PrimaryButton";
+import ReferenceGallery from "@/components/ui/ReferenceGallery";
+import SectionContainer from "@/components/ui/SectionContainer";
 
 const ReferencesPreviewSection = () => {
   return (
@@ -10,7 +10,7 @@ const ReferencesPreviewSection = () => {
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold">Referenciák</h2>
           <p className="mt-2 text-sm text-neutral-400 max-w-xl">
-            Néhány munka a korábbi kivitelezésekből (később kategóriázható).
+            Néhány munka a korábbi kivitelezésekből.
           </p>
         </div>
         <div className="hidden md:block">
@@ -22,7 +22,7 @@ const ReferencesPreviewSection = () => {
 
       <div className="mt-8">
         <ReferenceGallery
-          categories={siteConfig.references.categories as any}
+          categories={siteConfig.references.categories}
           items={siteConfig.references.items}
           enableCategoryFilter={false}
         />

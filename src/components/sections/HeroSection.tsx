@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/siteConfig";
-import PrimaryButton from "../ui/PrimaryButton";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 
 const HeroSection = () => {
   return (

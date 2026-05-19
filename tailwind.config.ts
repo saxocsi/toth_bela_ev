@@ -2,11 +2,8 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./app/**/*.{ts,tsx}", // ha nem src-es buildnél is jó
-    "./components/**/*.{ts,tsx}", // ha nem src-es buildnél is jó
-    "./src/app/**/*.{ts,tsx}", // ✅ nálad ez kell
-    "./src/components/**/*.{ts,tsx}", // ✅ nálad ez kell
-    "./src/styles/**/*.{css}", // opcionális
+    "./src/app/**/*.{ts,tsx}",
+    "./src/components/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {

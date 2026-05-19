@@ -1,7 +1,7 @@
 import { siteConfig } from "@/config/siteConfig";
-import SectionContainer from "../ui/SectionContainer";
-import Divider from "../ui/Divider";
-import PrimaryButton from "../ui/PrimaryButton";
+import SectionContainer from "@/components/ui/SectionContainer";
+import Divider from "@/components/ui/Divider";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 
 const ContactSection = () => {
   const mailtoHref = `mailto:${siteConfig.company.email}?subject=${encodeURIComponent(
@@ -20,7 +20,7 @@ const ContactSection = () => {
           <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
             <div className="font-semibold">Telefon</div>
             <a
-              className="mt-3 block text-lg underline underline-offset-4 hover:text-white"
+              className="mt-3 block text-lg underline underline-offset-4 hover:text-white transition"
               href={`tel:${siteConfig.company.phone}`}
             >
               {siteConfig.company.phone}
@@ -33,7 +33,7 @@ const ContactSection = () => {
           <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
             <div className="font-semibold">Email</div>
             <a
-              className="mt-3 block text-lg underline underline-offset-4 hover:text-white break-all"
+              className="mt-3 block text-lg underline underline-offset-4 hover:text-white break-all transition"
               href={`mailto:${siteConfig.company.email}`}
             >
               {siteConfig.company.email}
@@ -66,7 +66,8 @@ const ContactSection = () => {
                 key={area}
                 className="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-neutral-200"
               >
-                📍 {area}
+                <span aria-hidden="true">📍 </span>
+                {area}
               </li>
             ))}
           </ul>

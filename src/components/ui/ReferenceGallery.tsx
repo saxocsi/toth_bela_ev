@@ -2,18 +2,11 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import { type CategoryKey, type ReferenceCategory, type ReferenceItem } from "@/config/siteConfig";
 import LightboxModal from "./LightboxModal";
 
-type CategoryKey = "all" | "furdo" | "konyha" | "terasz" | "homlokzat";
-
-type ReferenceItem = {
-  src: string;
-  alt: string;
-  category: Exclude<CategoryKey, "all">;
-};
-
 type ReferenceGalleryProps = {
-  categories: Array<{ key: CategoryKey; label: string }>;
+  categories: ReferenceCategory[];
   items: ReferenceItem[];
   enableCategoryFilter?: boolean;
 };
@@ -38,27 +31,27 @@ const ReferenceGallery = ({
 
   const goPrev = () => {
     if (lightboxIndex === null) return;
-    const nextIndex =
-      (lightboxIndex - 1 + filteredItems.length) % filteredItems.length;
-    setLightboxIndex(nextIndex);
+    setLightboxIndex(
+      (lightboxIndex - 1 + filteredItems.length) % filteredItems.length,
+    );
   };
 
   const goNext = () => {
     if (lightboxIndex === null) return;
-    const nextIndex = (lightboxIndex + 1) % filteredItems.length;
-    setLightboxIndex(nextIndex);
+    setLightboxIndex((lightboxIndex + 1) % filteredItems.length);
   };
 
   return (
     <div>
       {enableCategoryFilter && (
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex flex-wrap gap-2 mb-6" role="group" aria-label="Kategória szűrő">
           {categories.map((category) => {
             const isActive = category.key === activeCategory;
             return (
               <button
                 key={category.key}
                 onClick={() => setActiveCategory(category.key)}
+                aria-pressed={isActive}
                 className={[
                   "rounded-full px-4 py-2 text-sm border transition",
                   isActive

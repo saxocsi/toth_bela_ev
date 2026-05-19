@@ -1,9 +1,9 @@
 import { siteConfig } from "@/config/siteConfig";
-import Divider from "../ui/Divider";
+import Divider from "@/components/ui/Divider";
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 const SiteFooter = () => {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="mt-20 border-t border-white/10">
       <div className="mx-auto max-w-6xl px-4 py-10">
@@ -19,7 +19,7 @@ const SiteFooter = () => {
             <div>
               Telefon:{" "}
               <a
-                className="underline underline-offset-4 hover:text-white"
+                className="underline underline-offset-4 hover:text-white transition"
                 href={`tel:${siteConfig.company.phone}`}
               >
                 {siteConfig.company.phone}
@@ -28,7 +28,7 @@ const SiteFooter = () => {
             <div>
               Email:{" "}
               <a
-                className="underline underline-offset-4 hover:text-white"
+                className="underline underline-offset-4 hover:text-white transition"
                 href={`mailto:${siteConfig.company.email}`}
               >
                 {siteConfig.company.email}
@@ -39,16 +39,8 @@ const SiteFooter = () => {
 
         <Divider className="my-8" />
 
-        <div className="text-xs text-neutral-500 flex flex-col md:flex-row md:justify-between gap-2">
-          <div>
-            © {year} {siteConfig.company.name}. Minden jog fenntartva.
-          </div>
-          <div>
-            SEO kulcsszavak:{" "}
-            <span className="text-neutral-400">
-              {siteConfig.keywordsFocus.join(", ")}
-            </span>
-          </div>
+        <div className="text-xs text-neutral-500">
+          © {CURRENT_YEAR} {siteConfig.company.name}. Minden jog fenntartva.
         </div>
       </div>
     </footer>

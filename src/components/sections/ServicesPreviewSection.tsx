@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/siteConfig";
-import SectionContainer from "../ui/SectionContainer";
-import ServiceCard from "../ui/ServiceCard";
+import SectionContainer from "@/components/ui/SectionContainer";
+import ServiceCard from "@/components/ui/ServiceCard";
 
 const ServicesPreviewSection = () => {
   return (

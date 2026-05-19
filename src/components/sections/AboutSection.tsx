@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/siteConfig";
-import SectionContainer from "../ui/SectionContainer";
+import SectionContainer from "@/components/ui/SectionContainer";
 
 const AboutSection = () => {
   return (

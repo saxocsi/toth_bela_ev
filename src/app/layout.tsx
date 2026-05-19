@@ -2,9 +2,9 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/siteConfig";
 import { absoluteUrl } from "@/lib/url";
-import SiteHeader from "../components/layout/SiteHeader";
-import SiteFooter from "../components/layout/SiteFooter";
-import MobileStickyCtaBar from "../components/layout/MobileStickyCallButton";
+import SiteHeader from "@/components/layout/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
+import MobileStickyCtaBar from "@/components/layout/MobileStickyCallButton";
 
 export const metadata: Metadata = {
   metadataBase: new URL(absoluteUrl("/")),
@@ -29,13 +29,6 @@ export const metadata: Metadata = {
     description:
       "Tóth Bela EV – professzionális kivitelezés Budapest és környékén.",
     images: [absoluteUrl(siteConfig.site.defaultOgImage)],
-  },
-  other: {
-    "tiktok:card": "summary_large_image",
-    "tiktok:title": "Kőműves Budapest | Burkoló | Generál kivitelezés",
-    "tiktok:description":
-      "Tóth Bela EV – professzionális kivitelezés Budapest és környékén.",
-    "tiktok:image": absoluteUrl(siteConfig.site.defaultOgImage),
   },
 };
 

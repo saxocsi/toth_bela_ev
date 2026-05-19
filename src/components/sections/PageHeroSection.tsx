@@ -1,5 +1,5 @@
-import Badge from "../ui/Badge";
-import SectionContainer from "../ui/SectionContainer";
+import Badge from "@/components/ui/Badge";
+import SectionContainer from "@/components/ui/SectionContainer";
 
 type PageHeroSectionProps = {
   title: string;
@@ -15,11 +15,13 @@ const PageHeroSection = ({
   return (
     <SectionContainer className="py-14 md:py-18">
       <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
-        <div className="flex flex-wrap gap-2 mb-5">
-          {badges.map((badge) => (
-            <Badge key={badge}>{badge}</Badge>
-          ))}
-        </div>
+        {badges.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-5">
+            {badges.map((badge) => (
+              <Badge key={badge}>{badge}</Badge>
+            ))}
+          </div>
+        )}
         <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
           {title}
         </h1>

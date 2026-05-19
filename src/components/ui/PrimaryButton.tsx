@@ -28,7 +28,7 @@ const PrimaryButton = ({
   return (
     <Link
       href={href}
-      className={`${base} ${sizeClass} ${variantClass} ${className}`}
+      className={[base, sizeClass, variantClass, className].filter(Boolean).join(" ")}
     >
       {children}
     </Link>

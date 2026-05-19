@@ -28,12 +28,5 @@ export const buildPageSeo = (params: {
       description,
       images: [ogImage],
     },
-    other: {
-      // “TikTok card” nincs hivatalos standard, de kérted – adjuk hozzá (nem árt, max ignorálják)
-      "tiktok:card": "summary_large_image",
-      "tiktok:title": title,
-      "tiktok:description": description,
-      "tiktok:image": ogImage,
-    },
   };
 };

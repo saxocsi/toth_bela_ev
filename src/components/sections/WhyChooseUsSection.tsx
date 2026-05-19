@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/siteConfig";
-import SectionContainer from "../ui/SectionContainer";
+import SectionContainer from "@/components/ui/SectionContainer";
 
 const WhyChooseUsSection = () => {
   return (
@@ -16,7 +16,8 @@ const WhyChooseUsSection = () => {
               key={item}
               className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-sm text-neutral-200"
             >
-              ✅ {item}
+              <span aria-hidden="true">✅ </span>
+              {item}
             </li>
           ))}
         </ul>

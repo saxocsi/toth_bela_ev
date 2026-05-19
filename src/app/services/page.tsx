@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-
 import { siteConfig } from "@/config/siteConfig";
-import PageHeroSection from "@/src/components/sections/PageHeroSection";
-import { buildLocalBusinessJsonLd } from "@/lib/sonLd";
 import { buildPageSeo } from "@/config/seo";
-import ServiceDetailsSection from "@/src/components/sections/ServiceDetailsSection";
-import CallToActionSection from "@/src/components/sections/CallToActionSection";
+import { buildLocalBusinessJsonLd } from "@/lib/sonLd";
+import PageHeroSection from "@/components/sections/PageHeroSection";
+import ServiceDetailsSection from "@/components/sections/ServiceDetailsSection";
+import CallToActionSection from "@/components/sections/CallToActionSection";
 
 export const metadata: Metadata = buildPageSeo({
   title:
