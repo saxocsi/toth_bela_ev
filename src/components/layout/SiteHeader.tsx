@@ -1,30 +1,31 @@
-import { siteConfig } from "@/config/siteConfig";
-import NavLink from "./NavLink";
-import PrimaryButton from "@/components/ui/PrimaryButton";
+"use client";
+
+import Link from "next/link";
+import { Menu } from "lucide-react";
+import { useState } from "react";
+import BrandBlock from "./BrandBlock";
+import { SiteSidebar } from "./SiteSidebar";
 
 const SiteHeader = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <header className="fixed top-0 left-0 w-full z-40 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
-      <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
-        <div className="min-w-0">
-          <div className="text-base font-semibold tracking-tight">
-            {siteConfig.company.name}
-          </div>
-          <div className="text-xs text-neutral-400">
-            {siteConfig.company.area}
-          </div>
-        </div>
+    <header className="fixed left-0 top-0 z-40 w-full border-b border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_28%),linear-gradient(110deg,rgba(10,10,10,0.92)_0%,rgba(23,23,23,0.86)_48%,rgba(5,5,5,0.94)_100%)] backdrop-blur-xl">
+      <div className="flex w-full items-center justify-between gap-4 py-4 px-4">
+        <Link href="/" className="min-w-0" aria-label="Főoldal">
+          <BrandBlock />
+        </Link>
 
-        <nav className="hidden md:flex items-center gap-6" aria-label="Főnavigáció">
-          <NavLink href="/" label="Főoldal" />
-          <NavLink href="/services" label="Szolgáltatások" />
-          <NavLink href="/references" label="Referenciák" />
-          <NavLink href="/about" label="Rólunk" />
-        </nav>
-
-        <div className="flex items-center gap-2">
-        </div>
+        <button
+          type="button"
+          aria-label="Menü megnyitása"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white hover:text-black"
+          onClick={() => setSidebarOpen(true)}
+        >
+          <Menu className="h-5 w-5" strokeWidth={2} />
+        </button>
       </div>
+      <SiteSidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </header>
   );
 };

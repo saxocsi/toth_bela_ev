@@ -172,10 +172,8 @@ export default function WorkflowScrollSection() {
             környéke.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <PrimaryButton href="/contact">Árajánlat kérése</PrimaryButton>
             <PrimaryButton
               href={`tel:${siteConfig.company.phone}`}
-              variant="secondary"
             >
               Hívás
             </PrimaryButton>

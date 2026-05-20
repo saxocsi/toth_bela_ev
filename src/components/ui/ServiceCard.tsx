@@ -1,4 +1,5 @@
 import PrimaryButton from "./PrimaryButton";
+import { siteConfig } from "@/config/siteConfig";
 
 type ServiceCardProps = {
   title: string;
@@ -15,8 +16,8 @@ const ServiceCard = ({ title, description, showAction = true }: ServiceCardProps
       </div>
       {showAction && (
         <div className="mt-5">
-          <PrimaryButton href="/contact" size="sm">
-            Ajánlatot kérek
+          <PrimaryButton href={`tel:${siteConfig.company.phone}`} size="sm">
+            Hívás
           </PrimaryButton>
         </div>
       )}

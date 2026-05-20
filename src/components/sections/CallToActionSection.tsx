@@ -8,19 +8,20 @@ const CallToActionSection = () => {
       <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold">
-            Kérj árajánlatot 1 perc alatt
+            Egyeztessünk telefonon
           </h2>
           <p className="mt-2 text-sm text-neutral-400 max-w-xl">
-            Telefonon vagy előre kitöltött emaillel. Budapest és környéke.
+            Hívj minket vagy küldj üzenetet. Budapest és környéke.
           </p>
         </div>
         <div className="flex gap-3">
-          <PrimaryButton href="/contact">Árajánlat</PrimaryButton>
           <PrimaryButton
             href={`tel:${siteConfig.company.phone}`}
-            variant="secondary"
           >
             Hívás
+          </PrimaryButton>
+          <PrimaryButton href={`mailto:${siteConfig.company.email}`} variant="secondary">
+            Email
           </PrimaryButton>
         </div>
       </div>
