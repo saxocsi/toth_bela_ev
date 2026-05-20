@@ -171,11 +171,14 @@ export default function WorkflowScrollSection() {
             {siteConfig.company.experienceLine}. Generál kivitelezés Budapest és
             környéke.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <PrimaryButton
-              href={`tel:${siteConfig.company.phone}`}
-            >
+          <div className="mt-10 flex items-center justify-center gap-4">
+            <PrimaryButton href={`tel:${siteConfig.company.phone}`}>
               Hívás
+            </PrimaryButton>
+            <PrimaryButton
+              href={`mailto:${siteConfig.company.email}`}
+            >
+              Email
             </PrimaryButton>
           </div>
         </div>
