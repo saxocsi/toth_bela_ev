@@ -9,9 +9,9 @@ type ServiceCardProps = {
 
 const ServiceCard = ({ title, description, showAction = true }: ServiceCardProps) => {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
-      <div className="text-lg font-semibold">{title}</div>
-      <div className="mt-3 text-sm text-neutral-300 leading-relaxed">
+    <div className="surface-readable rounded-2xl p-6 transition hover:bg-neutral-900/80">
+      <div className="text-lg font-semibold text-readable-soft">{title}</div>
+      <div className="mt-3 text-sm text-neutral-200 leading-relaxed">
         {description}
       </div>
       {showAction && (

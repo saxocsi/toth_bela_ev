@@ -56,7 +56,7 @@ const ReferenceGallery = ({
                   "rounded-full px-4 py-2 text-sm border transition",
                   isActive
                     ? "border-white bg-white text-black"
-                    : "border-white/15 bg-white/5 text-white hover:bg-white/10",
+                    : "border-white/15 bg-neutral-950/65 text-white backdrop-blur-md hover:bg-white/10",
                 ].join(" ")}
               >
                 {category.label}
@@ -71,7 +71,7 @@ const ReferenceGallery = ({
           <button
             key={`${item.src}-${index}`}
             onClick={() => openLightbox(index)}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5"
+            className="group surface-readable relative overflow-hidden rounded-2xl"
             aria-label={`Megnyitás: ${item.alt}`}
           >
             <div className="relative aspect-[4/3]">

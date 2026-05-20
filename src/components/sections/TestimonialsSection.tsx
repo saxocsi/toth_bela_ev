@@ -4,8 +4,8 @@ import SectionContainer from "@/components/ui/SectionContainer";
 const TestimonialsSection = () => {
   return (
     <SectionContainer className="py-16">
-      <h2 className="text-2xl md:text-3xl font-semibold">Vélemények</h2>
-      <p className="mt-2 text-sm text-neutral-400 max-w-xl">
+      <h2 className="text-2xl md:text-3xl font-semibold text-readable-soft">Vélemények</h2>
+      <p className="mt-2 text-sm text-neutral-300 max-w-xl text-readable-soft">
         Ügyfeleink tapasztalatai – valódi visszajelzések.
       </p>
 
@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
         {siteConfig.testimonials.map((item, index) => (
           <div
             key={index}
-            className="rounded-2xl border border-white/10 bg-white/5 p-6"
+            className="surface-readable rounded-2xl p-6"
           >
             <div className="text-sm text-neutral-200 leading-relaxed">
               &ldquo;{item.text}&rdquo;

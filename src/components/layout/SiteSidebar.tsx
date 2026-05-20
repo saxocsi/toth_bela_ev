@@ -62,7 +62,7 @@ export function SiteSidebar({ open, onClose }: SiteSidebarProps) {
           <button
             type="button"
             aria-label="Menü bezárása"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white hover:text-black"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-neutral-950/60 text-white shadow-lg shadow-black/20 backdrop-blur-md transition-colors hover:bg-white hover:text-black"
             onClick={onClose}
           >
             <X className="h-5 w-5" strokeWidth={1.9} />
@@ -77,7 +77,7 @@ export function SiteSidebar({ open, onClose }: SiteSidebarProps) {
                   <Link
                     href={item.href}
                     onClick={onClose}
-                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-base font-medium text-white transition-colors hover:bg-white/10"
+                    className="group surface-item flex items-center justify-between rounded-2xl px-4 py-4 text-base font-medium text-white transition-colors hover:bg-neutral-900/80"
                   >
                     <span>{item.label}</span>
                     <ArrowRight className="h-4 w-4 text-neutral-300 transition-transform group-hover:translate-x-0.5" />
@@ -97,7 +97,7 @@ export function SiteSidebar({ open, onClose }: SiteSidebarProps) {
             </a>
             <a
               href={`mailto:${siteConfig.company.email}`}
-              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-black"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/20 bg-neutral-950/60 px-4 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-black"
             >
               <Mail className="h-4 w-4" />
               Email

@@ -19,9 +19,9 @@ const ServiceDetailsSection = () => {
 
       <Divider className="my-12" />
 
-      <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
-        <h2 className="text-2xl md:text-3xl font-semibold">Munkamenet</h2>
-        <p className="mt-2 text-sm text-neutral-400 max-w-2xl">
+      <div className="surface-readable rounded-3xl p-8 md:p-12">
+        <h2 className="text-2xl md:text-3xl font-semibold text-readable-soft">Munkamenet</h2>
+        <p className="mt-2 text-sm text-neutral-300 max-w-2xl">
           Felmérés → Ajánlat → Kivitelezés. Átlátható kommunikáció, pontos
           ütemezés.
         </p>
@@ -30,10 +30,10 @@ const ServiceDetailsSection = () => {
           {siteConfig.workflowSteps.map((step) => (
             <div
               key={step.title}
-              className="rounded-2xl border border-white/10 bg-black/20 p-6"
+              className="surface-item rounded-2xl p-6"
             >
               <div className="font-semibold">{step.title}</div>
-              <div className="mt-2 text-sm text-neutral-300 leading-relaxed">
+              <div className="mt-2 text-sm text-neutral-200 leading-relaxed">
                 {step.description}
               </div>
             </div>
@@ -47,7 +47,7 @@ const ServiceDetailsSection = () => {
             {siteConfig.serviceAreaList.map((area) => (
               <li
                 key={area}
-                className="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-neutral-200"
+                className="surface-item rounded-xl px-4 py-3 text-sm text-neutral-100"
               >
                 <span aria-hidden="true">📍 </span>
                 {area}

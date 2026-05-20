@@ -164,10 +164,10 @@ export default function WorkflowScrollSection() {
             willChange: "opacity, transform",
           }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
+          <h1 className="text-readable text-4xl md:text-6xl font-bold leading-tight text-white">
             Kőműves és burkoló Budapest területén
           </h1>
-          <p className="mt-5 text-lg text-neutral-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-readable-soft mt-5 text-lg text-neutral-100 max-w-2xl mx-auto leading-relaxed">
             {siteConfig.company.experienceLine}. Generál kivitelezés Budapest és
             környéke.
           </p>
@@ -188,13 +188,13 @@ export default function WorkflowScrollSection() {
               className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center"
               style={stepStyle(i)}
             >
-              <span className="text-white/35 text-xs tracking-[0.3em] uppercase mb-4 font-medium">
+              <span className="text-readable-soft text-white/60 text-xs tracking-[0.3em] uppercase mb-4 font-medium">
                 {step.stepLabel}
               </span>
-              <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+              <h2 className="text-readable text-3xl md:text-5xl font-bold text-white leading-tight">
                 {step.headline}
               </h2>
-              <p className="mt-5 text-neutral-300 max-w-lg leading-relaxed text-base md:text-lg">
+              <p className="text-readable-soft mt-5 text-neutral-100 max-w-lg leading-relaxed text-base md:text-lg">
                 {step.body}
               </p>
             </div>
@@ -229,7 +229,7 @@ export default function WorkflowScrollSection() {
           style={{ opacity: hintAlpha, pointerEvents: "none" }}
           aria-hidden="true"
         >
-          <span className="text-white/30 text-[10px] tracking-[0.3em] uppercase">
+          <span className="text-readable-soft text-white/45 text-xs tracking-widest uppercase">
             görgess
           </span>
           <div className="w-px h-10 bg-gradient-to-b from-white/35 to-transparent" />

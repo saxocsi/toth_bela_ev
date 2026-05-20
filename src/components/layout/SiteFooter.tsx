@@ -5,17 +5,17 @@ const CURRENT_YEAR = new Date().getFullYear();
 
 const SiteFooter = () => {
   return (
-    <footer className="mt-20 border-t border-white/10">
-      <div className="mx-auto max-w-6xl px-4 py-10">
+    <footer className="mt-20 border-t border-white/10 bg-neutral-950/70 backdrop-blur-xl">
+      <div className="mx-auto max-w-6xl px-4 py-10 text-readable-soft">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <div className="font-semibold">{siteConfig.company.name}</div>
-            <div className="text-sm text-neutral-400 mt-1">
+            <div className="text-sm text-neutral-300 mt-1">
               {siteConfig.company.area} • {siteConfig.company.experienceLine}
             </div>
           </div>
 
-          <div className="text-sm text-neutral-300">
+          <div className="text-sm text-neutral-200">
             <div>
               Telefon:{" "}
               <a
@@ -39,7 +39,7 @@ const SiteFooter = () => {
 
         <Divider className="my-8" />
 
-        <div className="text-xs text-neutral-500">
+        <div className="text-xs text-neutral-400">
           © {CURRENT_YEAR} {siteConfig.company.name}. Minden jog fenntartva.
         </div>
       </div>

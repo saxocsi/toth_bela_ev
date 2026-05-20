@@ -8,8 +8,8 @@ const ReferencesPreviewSection = () => {
     <SectionContainer className="py-16">
       <div className="flex items-end justify-between gap-6">
         <div>
-          <h2 className="text-2xl md:text-3xl font-semibold">Referenciák</h2>
-          <p className="mt-2 text-sm text-neutral-400 max-w-xl">
+          <h2 className="text-2xl md:text-3xl font-semibold text-readable-soft">Referenciák</h2>
+          <p className="mt-2 text-sm text-neutral-300 max-w-xl text-readable-soft">
             Néhány munka a korábbi kivitelezésekből.
           </p>
         </div>

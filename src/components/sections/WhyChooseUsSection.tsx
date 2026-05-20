@@ -4,9 +4,9 @@ import SectionContainer from "@/components/ui/SectionContainer";
 const WhyChooseUsSection = () => {
   return (
     <SectionContainer className="pt-8 pb-16">
-      <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
-        <h2 className="text-2xl md:text-3xl font-semibold">Miért minket?</h2>
-        <p className="mt-2 text-sm text-neutral-400 max-w-2xl">
+      <div className="surface-readable rounded-3xl p-8 md:p-12">
+        <h2 className="text-2xl md:text-3xl font-semibold text-readable-soft">Miért minket?</h2>
+        <p className="mt-2 text-sm text-neutral-300 max-w-2xl">
           Bizalomépítő, átlátható kivitelezés – a cél a tartós minőség.
         </p>
 
@@ -14,7 +14,7 @@ const WhyChooseUsSection = () => {
           {siteConfig.whyChooseUs.map((item) => (
             <li
               key={item}
-              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-sm text-neutral-200"
+              className="surface-item rounded-2xl px-5 py-4 text-sm text-neutral-100"
             >
               <span aria-hidden="true">✅ </span>
               {item}

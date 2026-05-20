@@ -4,13 +4,13 @@ import PrimaryButton from "@/components/ui/PrimaryButton";
 
 const CallToActionSection = () => {
   return (
-    <SectionContainer className="py-16">
-      <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <SectionContainer className="py-4">
+      <div className="surface-readable rounded-3xl p-8 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
-          <h2 className="text-2xl md:text-3xl font-semibold">
+          <h2 className="text-2xl md:text-3xl font-semibold text-readable-soft">
             Egyeztessünk telefonon
           </h2>
-          <p className="mt-2 text-sm text-neutral-400 max-w-xl">
+          <p className="mt-2 text-sm text-neutral-300 max-w-xl">
             Hívj minket vagy küldj üzenetet. Budapest és környéke.
           </p>
         </div>

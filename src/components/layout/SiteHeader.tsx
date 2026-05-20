@@ -19,7 +19,7 @@ const SiteHeader = () => {
         <button
           type="button"
           aria-label="Menü megnyitása"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white hover:text-black"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-neutral-950/50 text-white shadow-lg shadow-black/20 backdrop-blur-md transition-colors hover:bg-white hover:text-black"
           onClick={() => setSidebarOpen(true)}
         >
           <Menu className="h-5 w-5" strokeWidth={2} />
