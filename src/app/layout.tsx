@@ -5,6 +5,7 @@ import { absoluteUrl } from "@/lib/url";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import MobileStickyCtaBar from "@/components/layout/MobileStickyCallButton";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   metadataBase: new URL(absoluteUrl("/")),
@@ -40,6 +41,16 @@ export default function RootLayout({
   return (
     <html lang="hu">
       <body>
+        <div className="fixed inset-0 -z-10">
+          <Image
+            src="/images/workflow/0.jpeg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
         <SiteHeader />
         <main className="min-h-[70vh]">{children}</main>
         <SiteFooter />

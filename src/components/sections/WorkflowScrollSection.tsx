@@ -1,15 +1,47 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useElementScrollProgress } from "@/animations/useScrollProgress";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 import { siteConfig } from "@/config/siteConfig";
+
+function StepImage({ src, placeholder, alt }: { src: string; placeholder: string; alt: string }) {
+  const [loaded, setLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (imgRef.current?.complete) setLoaded(true);
+  }, []);
+
+  return (
+    <>
+      {/* Plain img – already optimized WebP, skip Next.js optimizer */}
+      <img
+        src={placeholder}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
+        fetchPriority="high"
+      />
+      <Image
+        ref={imgRef}
+        src={src}
+        alt={alt}
+        fill
+        sizes="100vw"
+        priority
+        className={`object-cover transition-opacity duration-700 ${loaded ? "opacity-100" : "opacity-0"}`}
+        onLoad={() => setLoaded(true)}
+      />
+    </>
+  );
+}
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 type Step = {
   image: string;
+  placeholder: string;
   stepLabel: string;
   headline: string;
   body: string;
@@ -18,36 +50,42 @@ type Step = {
 const STEPS: Step[] = [
   {
     image: "/images/workflow/1.jpeg",
+    placeholder: "/images/workflow/1-placeholder.webp",
     stepLabel: "01 / 06",
     headline: "Alapozás, tereprendezés",
     body: "Szilárd alap nélkül nincs tartós épület. Talajelőkészítés, tereprendezés, zsaluzás és betonozás – mindent a tervek szerint.",
   },
   {
     image: "/images/workflow/2.jpeg",
+    placeholder: "/images/workflow/2-placeholder.webp",
     stepLabel: "02 / 06",
     headline: "Falazás, födémezés",
     body: "A szerkezeti falak és a vízszintes lemezek adják az épület vázát. Pontosság, erő és tartósság minden szinten.",
   },
   {
     image: "/images/workflow/3.jpeg",
+    placeholder: "/images/workflow/3-placeholder.webp",
     stepLabel: "03 / 06",
     headline: "Tetőszerkezet-építés",
     body: "Fa- vagy acélszerkezet, fedőanyag beépítése. Az épület bezárul az időjárás elől.",
   },
   {
     image: "/images/workflow/4.jpeg",
+    placeholder: "/images/workflow/4-placeholder.webp",
     stepLabel: "04 / 06",
     headline: "Nyílászáró-beépítés",
     body: "Ablakok, bejárati és belső ajtók. Fény, szellőzés, biztonság és energiahatékonyság egy lépésben.",
   },
   {
     image: "/images/workflow/5.jpeg",
+    placeholder: "/images/workflow/5-placeholder.webp",
     stepLabel: "05 / 06",
     headline: "Homlokzat, hőszigetelés",
     body: "Külső szigetelés, vakolat, festés. Energiatakarékos, időtálló és esztétikus végeredmény.",
   },
   {
     image: "/images/workflow/6.jpeg",
+    placeholder: "/images/workflow/6-placeholder.webp",
     stepLabel: "06 / 06",
     headline: "Térkövezés, kertépítés",
     body: "Járdák, teraszok, kerítés és kertrendezés. A ház megkapja a végleges, élhető keretét.",
@@ -143,13 +181,10 @@ export default function WorkflowScrollSection() {
             className="absolute inset-0"
             style={{ opacity: imgOpacity(i), willChange: "opacity" }}
           >
-            <Image
+            <StepImage
               src={step.image}
+              placeholder={step.placeholder}
               alt={step.headline}
-              fill
-              sizes="100vw"
-              className="object-cover"
-              priority={i === 0}
             />
           </div>
         ))}
