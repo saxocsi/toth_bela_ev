@@ -20,20 +20,9 @@ const SiteHeader = () => {
           <NavLink href="/services" label="Szolgáltatások" />
           <NavLink href="/references" label="Referenciák" />
           <NavLink href="/about" label="Rólunk" />
-          <NavLink href="/contact" label="Kapcsolat" />
         </nav>
 
         <div className="flex items-center gap-2">
-          <PrimaryButton href="/contact" size="sm">
-            Árajánlat
-          </PrimaryButton>
-          <PrimaryButton
-            href={`tel:${siteConfig.company.phone}`}
-            variant="secondary"
-            size="sm"
-          >
-            Hívás
-          </PrimaryButton>
         </div>
       </div>
     </header>

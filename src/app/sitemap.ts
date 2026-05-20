@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { absoluteUrl } from "@/lib/url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["/", "/services", "/references", "/about", "/contact"];
+  const routes = ["/", "/services", "/references", "/about"];
 
   return routes.map((path) => ({
     url: absoluteUrl(path),

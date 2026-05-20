@@ -193,12 +193,6 @@ export const siteConfig = {
     },
   ] as FaqItem[],
 
-  contact: {
-    offerEmailSubject: "Árajánlatkérés – Tóth Bela EV",
-    offerEmailBody:
-      "Kedves Tóth Béla!\n\nSzeretnék árajánlatot kérni.\n\nHelyszín (cím):\nMunka típusa (burkolás/kőműves/generál):\nRövid leírás:\nHatáridő elképzelés:\n\nKöszönöm!\nNév:\nTelefonszám:\n",
-  },
-
   site: {
     urlFallback: "http://localhost:3000",
     defaultOgImage: "/og-default.png",

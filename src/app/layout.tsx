@@ -43,7 +43,6 @@ export default function RootLayout({
         <SiteHeader />
         <main className="min-h-[70vh]">{children}</main>
         <SiteFooter />
-        <MobileStickyCtaBar />
       </body>
     </html>
   );
